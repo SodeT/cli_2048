@@ -62,7 +62,7 @@ fn spawn_block(game_board: &mut [i32]) -> bool {
     let mut positions = vec![0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
     for _i in 0..16 {
-        let index = rng.gen_range(0..16);
+        let index = rng.gen_range(0..positions.len());
         let position = positions[index] as usize;
 
         if game_board[position] == 0 {
